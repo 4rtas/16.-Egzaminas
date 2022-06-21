@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e8e8e8;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.menuNav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(90 89 89 / 13%);
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s ease-out;
+}
+
+.menuList a {
+  display: block;
+  padding: 30px;
+  color: black;
+}
+
+.menuList a:hover {
+  background-color: black;
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+
+.hamb-line {
+  background: black;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  max-height: 500px;
+}
+
+.hamb-line::before {
+  top: 5px;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+.side-menu:checked ~ .menuNav {
+  max-height: 50%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .menuNav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: white;
+  }
+  .menuList {
+    float: left;
+  }
+  .menuList a:hover {
+    background-color: transparent;
+  }
+  .hamb {
+    display: none;
+  }
+}
+
+main {
+  background-color: white;
+  margin: 6rem auto;
+  border-radius: 15px;
+  padding: 0.5rem 0.5rem;
+  max-width: 1000px;
+  min-width: 768px;
+}
+
+main header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 3rem 2rem 1.5rem;
+}
+
+.logoPic {
+  width: 10rem;
+  display: inline-block;
+}
+
+nav a {
+  padding: 1rem;
+  color: rgb(70, 68, 68);
+  text-decoration: none;
+  text-size-adjust: 1rem;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.signUp {
+  color: rgb(245, 78, 181);
+}
+
+h4 {
+  color: rgb(245, 78, 181);
+  font-weight: bold;
+  margin: 1rem 1rem 0rem 1rem;
+  padding: 4rem 1rem 0rem 1.5rem;
+  font-size: smaller;
+}
+
+.graphicPic {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  float: right;
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.container1 {
+  display: inline;
+  margin-bottom: 5rem;
+}
+
+.container1 p {
+  width: 40%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 1000;
+  padding: 1.5rem;
+  margin-inline-start: 1rem;
+}
+
+.containerEarlyBirds {
+  margin: 1.5rem 2rem;
+  padding: 5rem 0 2rem 3rem;
+  background-image: url(background.svg);
+  background-size: cover;
+  border-radius: 15px;
+  text-align: justify;
+}
+
+.containerEarlyBirds h3 {
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.container1 p {
+  margin: 1rem 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+button {
+  border: 2.5px solid orangered;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 2rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(205, 23, 214), rgb(248, 111, 26), yellow)
+      border-box;
+}
+
+button:hover {
+  font-size: 1.5rem;
+  background-color: pink;
+  margin: 2rem 0 1.92rem 2rem;
+}
+
+.companies {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem 1rem 0rem;
+  flex-wrap: wrap;
+}
+
+.companies img {
+  margin: auto;
+  margin-top: 0%;
+  width: 7rem;
+  height: 4rem;
+}
+
+.nftReleaseText h3 {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.nftReleaseText p {
+  padding: 1rem 2rem;
+  color: gray;
+}
+
+.nftReleaseText a {
+  color: gray;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  justify-content: space-between;
+  padding: 0 1rem 3rem 0;
+  white-space: nowrap;
+}
+
+.NFT {
+  background-size: cover;
+}
+
+.nftImg {
+  width: 180px;
+  background-size: cover;
+  margin: 2rem 2rem 0 2rem;
+  border-top-left-radius: 10px;
+}
+
+.nftImg:hover {
+  width: 185px;
+  height: 180px;
+  top: 100%;
+}
+
+.ethImg {
+  height: 0.8rem;
+  padding: 0 0.3rem 0 0;
+}
+
+table {
+  width: 180px;
+  font-size: auto;
+  margin: 0 auto;
+  padding: 0 0.3rem;
+  border-spacing: 35px 0 35px 0;
+  background-color: rgb(248, 246, 246);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.gloopText {
+  font-size: 0.5rem;
+  color: orange;
+  font-weight: bold;
+}
+
+.nftNameText {
+  font-size: 0.7rem;
+  color: black;
+  font-weight: bold;
+}
+
+.bidText {
+  font-size: 0.5rem;
+  color: rgb(75, 74, 71);
+  font-weight: bold;
+}
+
+.countdownText {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td {
+  text-align: right;
+}
+
+.upsellPic {
+  max-width: 14%;
+  display: flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  margin: 0 15rem 0 2rem;
+  padding: 0;
+  float: right;
+  object-fit: cover;
+}
+
+h2 {
+  margin: 2rem 2rem;
+  font-weight: 1000;
+}
+
+.upsellParagraph {
+  color: gray;
+}
+
+footer {
+  margin: 5rem 2rem;
+}
+
+footer p {
+  margin: 1rem 0;
+  color: gray;
+  display: flex;
+}
+
+.footerLogo {
+  margin-right: 15rem;
+}
+
+.soc {
+  margin: 0 0.2rem;
+}
+
+.footerTableMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerMenu {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.footerMenu a {
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+  color: gray;
+}
+
+.footerMenu a:hover {
+  font-weight: bold;
+  color: pink;
+}
+
+.footerRow {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.column1,
+.column2 {
+  flex: 50%;
+  margin-top: 2rem;
+  font-size: small;
+  align-self: right;
+}
+
+.column2 {
+  margin-left: 35rem;
+}
+
+@media screen and (max-width: 320px) {
+  .column1,
+  .column2 {
+    width: 100%;
+  }
+}
